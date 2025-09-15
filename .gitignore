@@ -1,0 +1,179 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# EXCLUDE LARGE DATASETS - Keep only core pipeline
+# Training datasets (61GB)
+01_stage_2d_instance_segmentation/dataset_preparation/
+01_stage_2d_instance_segmentation/Data_sets/
+01_stage_2d_instance_segmentation/enhanced_ycb_dataset/
+01_stage_2d_instance_segmentation/semantic_segmentation_project/
+01_stage_2d_instance_segmentation/lowtexture_test_data/
+01_stage_2d_instance_segmentation/enhanced_*/
+01_stage_2d_instance_segmentation/ycb_*/
+01_stage_2d_instance_segmentation/Ai_pose recognition_using_segmentation/
+
+# Large model weights (keep only essential)
+01_stage_2d_instance_segmentation/model_outputs/
+01_stage_2d_instance_segmentation/models/
+
+# Large captured images (keep only samples)
+00_setup_and_data/data_storage/
+00_setup_and_data/processed_images/
+
+# Large result files
+04_stage_output_formatting/Results/
+
+# Research papers (large PDFs)
+06_documentation/research_papers/*.pdf
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.m4v
+*.mkv
+
+# Large image datasets
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+
+# Exclude documentation files (keep only README.md)
+06_documentation/LaTeX_Setup_Guide.md
+06_documentation/MSc_Report_AI_6D_Pose_Recognition.md
+06_documentation/YCB_IMPORT_GUIDE.md
+06_documentation/claude_project_report.md
+06_documentation/methods_comparison_analysis.md
+
+# Exclude LaTeX files
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Exclude project reports and analysis
+*_report.md
+*_analysis.md
+*_comparison.md
+*_guide.md
+
+# Exclude large model files
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Exclude point cloud files (too large)
+*.ply
+*.pcd
+*.xyz
+
+# Exclude result files
+*_results/
+*_outputs/
+*_captures/
+*_images/
+
+# Exclude large simulation files
+*.ttt
+*.ttm
+*.sim
+
+# Keep only essential pipeline files
+!README.md
+!LICENSE
+!requirements.txt
+!setup.py
+!*.py
+!*.lua
+!*.json
+!*.yaml
+!*.yml
+!*.txt
