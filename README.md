@@ -95,6 +95,8 @@ The three axes from PCA are formed into a 3x3 Rotation Matrix. This matrix is th
 
 **Final Output**: Complete 6D pose = 3D position + 3D orientation
 
+![MCC Framework](06_documentation/images/MCC.png)
+*Meta AI MCC Framework: Advanced 3D reconstruction and enhanced object understanding*
 
 ## 📊 Part 4: The Results and Validation
 
@@ -110,6 +112,8 @@ The system's performance, validated against ground truth from CoppeliaSim, succe
 - **High Accuracy**: ±2mm position accuracy and ±0.1° orientation precision
 - **Industry-Ready Output**: High-quality, 76,800-point 3D models in standard formats (OBJ, PLY)
 
+![Performance Validation](06_documentation/images/Performance_validation.png)
+*Comprehensive performance validation showing real-time processing capabilities and accuracy metrics*
 
 ## 🏆 Research Contributions and Impact
 
