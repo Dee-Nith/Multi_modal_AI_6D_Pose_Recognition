@@ -108,16 +108,33 @@ Thumbs.db
 *.m4v
 *.mkv
 
-# Large image datasets
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.bmp
-*.tiff
-*.tif
-*.webp
-*.svg
+# Large image datasets (exclude training data)
+01_stage_2d_instance_segmentation/dataset_preparation/*.jpg
+01_stage_2d_instance_segmentation/dataset_preparation/*.jpeg
+01_stage_2d_instance_segmentation/dataset_preparation/*.png
+01_stage_2d_instance_segmentation/training_outputs/*.jpg
+01_stage_2d_instance_segmentation/training_outputs/*.jpeg
+01_stage_2d_instance_segmentation/training_outputs/*.png
+02_stage_3d_point_cloud_generation/depth_processing/*.jpg
+02_stage_3d_point_cloud_generation/depth_processing/*.jpeg
+02_stage_3d_point_cloud_generation/depth_processing/*.png
+
+# Allow documentation images
+!README*.jpg
+!README*.jpeg
+!README*.png
+!README*.gif
+!README*.svg
+!docs/*.jpg
+!docs/*.jpeg
+!docs/*.png
+!docs/*.gif
+!docs/*.svg
+!06_documentation/*.jpg
+!06_documentation/*.jpeg
+!06_documentation/*.png
+!06_documentation/*.gif
+!06_documentation/*.svg
 
 # Exclude documentation files (keep only README.md)
 06_documentation/LaTeX_Setup_Guide.md

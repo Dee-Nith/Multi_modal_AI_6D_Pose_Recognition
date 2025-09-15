@@ -34,9 +34,15 @@ The proposed system employs a four-stage processing pipeline that combines deep 
 - **Detection Rate**: 100% with 88.4% average confidence
 - **Point Cloud Density**: 76,800+ points per object model
 
+![Real-time Demo](06_documentation/images/1-ezgif.com-video-to-gif-converter.gif)
+*Figure 1: Real-time 6D pose estimation demonstration showing live processing capabilities*
+
 ## 3. System Design and Implementation
 
 ### 3.1 Four-Stage Processing Pipeline
+
+![Pipeline Overview](06_documentation/images/Pipe_lline.png)
+*Figure 1: Complete 4-stage processing pipeline for 6D pose estimation*
 
 #### 3.1.1 Stage 0: Data Acquisition and Preprocessing
 - **Simulation Environment**: CoppeliaSim robotics simulator setup
@@ -50,17 +56,29 @@ The proposed system employs a four-stage processing pipeline that combines deep 
 - **Output Generation**: Precise pixel-level binary masks
 - **Training Protocol**: End-to-end training with data augmentation
 
+![Instance Segmentation Results](06_documentation/images/Instence%20segemntation%20results.png)
+*Figure 2: YOLOv8 instance segmentation results showing precise object detection and masking*
+
 #### 3.1.3 Stage 2: 3D Point Cloud Generation
 - **Geometric Processing**: RGB-D fusion using pinhole camera model
 - **Input Requirements**: 2D segmentation masks + corresponding depth maps
 - **Output Generation**: Dense, colored 3D point clouds (76,800+ points)
 - **Mathematical Foundation**: Back-projection using camera intrinsic parameters
 
+![Depth Map Processing](06_documentation/images/Depth%20map.png)
+*Figure 3: Depth map processing and RGB-D fusion for 3D point cloud generation*
+
+![Point Cloud Generation](06_documentation/images/Point%20cloud.png)
+*Figure 4: Generated 3D point cloud with 76,800+ colored points*
+
 #### 3.1.4 Stage 3: 6D Pose Estimation
 - **Position Estimation**: 3D centroid calculation from point cloud
 - **Orientation Estimation**: Principal Component Analysis (PCA) on point cloud
 - **Output Format**: Complete 6D pose (x, y, z, roll, pitch, yaw)
 - **Real-time Processing**: Optimized for 20+ FPS performance
+
+![6D Pose Estimation Results](06_documentation/images/6d%20Pose%20estimation.png)
+*Figure 5: Final 6D pose estimation results showing position and orientation accuracy*
 
 #### 3.1.5 Stage 4: Output Formatting and Integration
 - **Coordinate Transformation**: 3×3 rotation matrix to Euler angles
